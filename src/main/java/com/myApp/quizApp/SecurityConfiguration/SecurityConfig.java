@@ -18,7 +18,7 @@ public class SecurityConfig {
                 .csrf(csrf -> csrf.disable())
                 .authorizeHttpRequests(auth -> auth
                         // allow these without authentication
-                        .requestMatchers("/user/**","/quiz/submit/**","/quiz/**","/question/**").permitAll()
+                        .requestMatchers("/user/**","/quiz/**","/quiz/**","/question/**").permitAll()
                         // every other request must be authenticated
                         .anyRequest().authenticated()
                 )
